@@ -17,12 +17,12 @@ subtitle: A Jekyll template for project documentation
 # When working locally use jekyll serve --baseurl '' so that you can view everything at localhost:4000
 # See http://jekyllrb.com/docs/github-pages/ for more info
 #baseurl: ''
-baseurl: '/DOCter'
+baseurl: '/WRRC-Data-Portal'
 
 # Author/Organization info to be displayed in the templates
 author:
-  name: Name
-  url: http://localhost:4000
+  name: cshuler
+  url: https://cshuler.github.io/WRRC-Data-Portal
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
 logourl:
@@ -34,7 +34,7 @@ navigation:
 - text: Home
   url: ./
   internal: true
-- text: Example Page
+- text: Project Background
   url: example_page/
   internal: true
 - text: DOCter Repo
