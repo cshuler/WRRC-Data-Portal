@@ -22,7 +22,7 @@ baseurl: '/WRRC-Data-Portal'
 # Author/Organization info to be displayed in the templates
 author:
   name: cshuler
-  url: http://localhost:4000
+  url: https://cshuler.github.io/WRRC-Data-Portal/
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
 logourl:
@@ -43,6 +43,13 @@ navigation:
 - text: Project Repo
   url: https://github.com/cshuler/WRRC-Data-Portal
   internal: false
+- text: NLP documentation
+  url: NLP_documentation/
+  internal: true
+- text: Ansible documentation
+  url: ansible_documentation/
+  internal: true
+  
 
 # Repo list
 # List repos that you would like to appear on the homepage here
