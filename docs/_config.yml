@@ -9,8 +9,8 @@ collections:
     permalink: /:path/
 
 # Title
-name: WRRC-Data-Portal
-subtitle: Production code for Hawaii and American Samoa Water Resources data Portal
+name: WRRC-Data-Portal Docs
+subtitle: Documentation for building and using the Hawaii and American Samoa Water Resources data Portal
 
 # When using this template with a project page set the baseurl to '/project-name'
 # For user/organization pages set this to an empty string
