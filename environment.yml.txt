@@ -1,0 +1,12 @@
+name: WRRC_data_portal_env
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - pandas
+  - pypdf2
+  - pip:
+    - pdftitle
+  
