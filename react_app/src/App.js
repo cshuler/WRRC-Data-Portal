@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          WRRC Data Portal
+          WRRC Data Portals Site
         </p>
       </header>
     </div>
