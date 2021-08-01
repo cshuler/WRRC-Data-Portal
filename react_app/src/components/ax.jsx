@@ -10,7 +10,6 @@ export default function Ax() {
 				      "https://official-joke-api.appspot.com/random_joke"
 				    ).then((response) => {
 					          setJoke(response.data.punchline);
-					          console.log(response.data.punchline);
 					        });
 
 		    }
