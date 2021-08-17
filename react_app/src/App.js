@@ -1,21 +1,39 @@
-import Ax from './components/ax';
 import logo from './logo.svg';
 import './App.css';
-import { Header } from './components/Header'; 
-import Uploads from './components/uploads';
+
 
 function App() {
+
+   const crazy = () => {
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData();
+
+
+    const inpFile = document.getElementById("inpFile");
+
+	   for (const file of inpFile.files){
+		formData.append("myFiles[]", file);
+	   }
+
+	   xhr.open("post", "http://clarkwhitehead.com/upload.php");
+	   xhr.send(formData);
+    }
+
+
   return (
     <div className="App">
-      <Uploads />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          WRRC Data Portals Site
-        </p>
-      </header>
+
+	
+	  <input type="file" id="inpFile" multiple />
+	  <button onClick={crazy} id="btnUpload">Upload Files</button>
+	  
+	</header>
     </div>
   );
 }
+
+
 
 export default App;
