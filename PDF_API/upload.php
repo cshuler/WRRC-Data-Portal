@@ -9,6 +9,6 @@ foreach ($_FILES["myFiles"]["tmp_name"] as $key => $value) {
 
 	$fileName = $_FILES["myFiles"]["name"][0];
 
-    $command = escapeshellcmd('python3 test2.py ' . $fileName);                                                                $output = shell_exec($command);     
+    $command = escapeshellcmd('python3 extract.py uploads/' . $fileName);                                                                $output = shell_exec($command);     
 
 ?>
