@@ -1,37 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React, {useState} from 'react';
 
 function App() {
 
-/*
-	const fs = require('fs').promises;
+	const [title, setTitle] = useState("A cool title will go here once you upload.");
+	const [author, setAuthor] = useState("Upload a pdf so we can see who the author is.");
+	const [keywords, setKeywords] = useState("I wonder what keywords will show up here.");
 
-	const path = __dirname + '/data.json';
+	function setVals(datas){
+		setTitle(datas['title']);
+		setAuthor(datas['authors']);
+		setKeywords(datas['keywords']);
 
-	if(fs.existsSync(path)){
-		console.log('file exits');
 	}
 
-*/
+	function getJson(){
 
 /*
-	const data = require('./data.json');
+	const data = require('http://clarkwhitehead.com/data.json');
 
 	const title = data['title'];
 	const author = data['authors'];
 	const keywords = data['keywords'];
 */
 
-	function getJson(){
-
+/*
 		fetch('http://clarkwhitehead.com/data.json')
 		  	.then(response => response.json())
 		  	.then(data => console.log(data));
+*/
+		fetch('http://clarkwhitehead.com/data.json')
+		  	.then(response => response.json())
+		  	.then(data => setVals(data));
 
 	}
 
-    async function handleClick(){
+    function handleClick(){
     	const xhr = new XMLHttpRequest();
     	const formData = new FormData();
 
@@ -65,7 +70,9 @@ function App() {
 	
 	  <input type="file" id="inpFile" multiple />
 	  <button onClick={handleClick} id="btnUpload">Upload Files</button>
-
+	<h1>Title: {title}</h1>
+	<h1>Author: {author}</h1>
+	<h1>Keywords: {keywords}</h1>
 	</header>
     </div>
   );
