@@ -17,19 +17,7 @@ function App() {
 
 	function getJson(){
 
-/*
-	const data = require('http://clarkwhitehead.com/data.json');
 
-	const title = data['title'];
-	const author = data['authors'];
-	const keywords = data['keywords'];
-*/
-
-/*
-		fetch('http://clarkwhitehead.com/data.json')
-		  	.then(response => response.json())
-		  	.then(data => console.log(data));
-*/
 		fetch('http://clarkwhitehead.com/data.json')
 		  	.then(response => response.json())
 		  	.then(data => setVals(data));
@@ -68,7 +56,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
 	
-	  <input type="file" id="inpFile" multiple />
+	  <input type="file" id="inpFile" name="filename" />
 	  <button onClick={handleClick} id="btnUpload">Upload Files</button>
 	<h1>Title: {title}</h1>
 	<h1>Author: {author}</h1>
